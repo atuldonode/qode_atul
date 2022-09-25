@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "8a1385a0-daa6-4be7-9af2-7b6c95cbf0ea",
+		"name": "atul_qodeQuay",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"dada\",\r\n    \"lastName\":\"ganguly\",\r\n    \"city\":\"kolkata\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all user List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/userList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"userList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "specific field serch only city",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/search?city=Nagpur",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"search"
+					],
+					"query": [
+						{
+							"key": "city",
+							"value": "Nagpur"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "allow multi column search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/multisearch?firstName=atul&city=gondia",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"multisearch"
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": "atul"
+						},
+						{
+							"key": "city",
+							"value": "gondia"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
